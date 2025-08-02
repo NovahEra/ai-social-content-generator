@@ -1,16 +1,20 @@
 {
-  "name": "ai-social-content-generator",
+  "name": "ai-content-generator",
   "version": "1.0.0",
-  "description": "AI-powered social media content generator",
-  "main": "index.js",
-"scripts": {
-  "build": "netlify-lambda build \"netlify/functions\"",
-  "dev": "netlify-lambda serve netlify/functions"
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "openai": "^4.0.0"
+    "dotenv": "^16.6.1",
+    "next": "latest",
+    "openai": "^5.11.0",
+    "react": "^18",
+    "react-dom": "^18"
   },
-  "engines": {
-    "node": "18.x"
+  "devDependencies": {
+    "typescript": "^5.0.0"
   }
 }

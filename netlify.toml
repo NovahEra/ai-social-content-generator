@@ -1,21 +1,24 @@
 # netlify.toml
 [build]
-  publish = "public"
-  command = "npm run build"
+  command = "next build"
+  publish = ".next"
+  # Optional: Set the directory for static files
+  # publish = ".next/public"
 
+# Define serverless functions
+[[plugins]]
+  package = "@netlify/plugin-functions"
+
+# Define function paths
 [functions]
-  directory = "netlify/functions"
-  build_directory = "functions-build"  # ← This is the fix!
+  directory = "functions"  # Where your serverless functions live
 
-# Optional: Set Node.js version (recommended)
-[build.environment]
-  NODE_VERSION = "18"
+# Optional: Add environment variables (set in Netlify UI)
+# [context.production]
+#   environment = { NODE_ENV = "production" }
 
-# Optional: Set deploy context (e.g., for PR previews)
-[context.production]
-  publish = "."
-  functions = "netlify/functions"
-
-[context.develop]
-  publish = "."
-  functions = "netlify/functions"
+# Optional: Custom redirects (for SPA routing)
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

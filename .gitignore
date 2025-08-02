@@ -1,8 +1,9 @@
 # Node.js
 node_modules/
-npm-debug.log*
-package-lock.json
 .env
+.next/
+.cache/
+npm-debug.log*
 
 # IDE
 .vscode/
@@ -11,8 +12,6 @@ package-lock.json
 *.swo
 
 # Build
+out/
 dist/
 build/
-
-# Netlify
-.netlify/
