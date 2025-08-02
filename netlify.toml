@@ -8,13 +8,6 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Optional: Set build cache
-[build]
-  publish = "."
-  functions = "netlify/functions"
-  # Enable build caching for faster deploys
-  cache = true
-
 # Optional: Set deploy context (e.g., for PR previews)
 [context.production]
   publish = "."
