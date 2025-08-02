@@ -1,38 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Social Content Generator | Novahera</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<!-- AI Content Generator Section -->
+<section class="generator-section">
+  <h2>✨ Generate Social Media Posts in Seconds</h2>
+  
+  <div class="form-group">
+    <label for="topic">What’s your business about?</label>
+    <input type="text" id="topic" placeholder="e.g., Vegan bakery, fitness coach, SaaS tool" required>
+  </div>
 
-  <section class="hero">
-    <h1>Get 5 Free Social Posts for Your Cause</h1>
-    <p>Tell us your mission — we’ll generate real, engaging content in seconds.</p>
+  <div class="form-group">
+    <label for="platform">Choose Platform</label>
+    <select id="platform" required>
+      <option value="instagram">Instagram</option>
+      <option value="facebook">Facebook</option>
+      <option value="twitter">Twitter/X</option>
+      <option value="linkedin">LinkedIn</option>
+      <option value="all">All Platforms</option>
+    </select>
+  </div>
 
-    <form id="contentForm">
-      <input type="text" name="cause" placeholder="e.g., Youth Mentorship Program" required />
-      <input type="text" name="causeArea" placeholder="e.g., Education, Climate, Health" required />
-      <input type="email" name="email" placeholder="you@yourcause.org" required />
-      <button type="submit">✅ Get My 5 Free Posts Now</button>
-    </form>
+  <button id="generate-btn" class="btn-generate">🚀 Generate Post</button>
 
-    <p class="small">No spam. No signup. Just value.</p>
-  </section>
-
-  <section class="social-proof">
-    <p>“This gave us 150+ shares — and 5 new volunteers. Game-changer!” <br><strong>— Amina, Youth Advocate</strong></p>
-    <p>“Finally, a tool that understands nonprofit content challenges.” <br><strong>— David, Community Organizer</strong></p>
-  </section>
-
-  <section class="cta">
-    <h2>Want Unlimited AI Content?</h2>
-    <p>Generate endless posts, stories, and campaigns — starting at $9/month.</p>
-    <a href="/pricing" class="btn">🔥 See Pricing & Features</a>
-  </section>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <div id="output" class="output-area"></div>
+</section>
