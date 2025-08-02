@@ -1,0 +1,16 @@
+{
+  "name": "ai-social-content-generator",
+  "version": "1.0.0",
+  "description": "AI-powered social media content generator",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify-lambda serve netlify/functions",
+    "build": "netlify-lambda build netlify/functions"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
