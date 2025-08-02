@@ -1,8 +1,11 @@
 # netlify.toml
 [build]
-  command = "npm install"
-  publish = "."
-  functions = "netlify/functions"
+  publish = "public"
+  command = "npm run build"
+
+[functions]
+  directory = "netlify/functions"
+  build_directory = "functions-build"  # ← This is the fix!
 
 # Optional: Set Node.js version (recommended)
 [build.environment]
