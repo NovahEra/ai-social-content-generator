@@ -1,0 +1,25 @@
+# netlify.toml
+[build]
+  command = "npm install"
+  publish = "."
+  functions = "netlify/functions"
+
+# Optional: Set Node.js version (recommended)
+[build.environment]
+  NODE_VERSION = "18"
+
+# Optional: Set build cache
+[build]
+  publish = "."
+  functions = "netlify/functions"
+  # Enable build caching for faster deploys
+  cache = true
+
+# Optional: Set deploy context (e.g., for PR previews)
+[context.production]
+  publish = "."
+  functions = "netlify/functions"
+
+[context.develop]
+  publish = "."
+  functions = "netlify/functions"
