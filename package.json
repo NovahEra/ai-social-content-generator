@@ -19,6 +19,8 @@
     "uuid": "^11.1.0"
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
+  "@netlify/plugin-functions": "^x.y.z"
+}
+"typescript": "^5.0.0"
   }
 }

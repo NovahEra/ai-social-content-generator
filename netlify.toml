@@ -1,11 +1,7 @@
 # netlify.toml
 [build]
-  command = "next build"
-  publish = ".next"
-  # Optional: Set the directory for static files
-  # publish = ".next/public"
+  functions = "netlify/functions"
 
-# Define serverless functions
 [[plugins]]
   package = "@netlify/plugin-functions"
 
@@ -16,6 +12,8 @@
 # Optional: Add environment variables (set in Netlify UI)
 # [context.production]
 #   environment = { NODE_ENV = "production" }
+[build.environment]
+  NODE_VERSION = "20"
 
 # Optional: Custom redirects (for SPA routing)
 [[redirects]]
